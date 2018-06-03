@@ -35,14 +35,14 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">BLOG</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">САЙТ</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">CATEGORY</a>
-                            <a class="dropdown-item" href="#">ARTICLES</a>
+                            <a class="dropdown-item" href="{{route('admin.category.index')}}">КАТЕГОРИИ</a>
+                            <a class="dropdown-item" href="#">СТАТЬИ</a>
                         </div>
                     </li>
                 </ul>
-
+                  <b><span class="text-center d-none d-md-block">@yield('title')</span></b>
                 <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav ml-auto">
                     <!-- Authentication Links -->
