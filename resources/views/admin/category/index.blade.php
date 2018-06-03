@@ -16,7 +16,7 @@
 
     <hr>
     <div class="container">
-        <a href="{{route('admin.category.create')}}" class="btn btn-info pull-right">СОЗДАТЬ КАТЕГОРИЮ</a>
+        <a href="{{route('admin.category.create')}}" class="btn btn-info pull-right"><i class="fa fa-plus-square"></i> СОЗДАТЬ КАТЕГОРИЮ</a>
 
         <table class="table table-striped">
             <thead>
@@ -40,6 +40,17 @@
                 </tr>
             @endforelse
             </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination pull-right">
+                                {{$categories->links()}}
+                            </ul>
+                        </nav>
+                    </td>
+                </tr>
+            </tfoot>
         </table>
     </div>
 @endsection
