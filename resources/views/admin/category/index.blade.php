@@ -20,16 +20,25 @@
 
         <table class="table table-striped">
             <thead>
-            <th class="text-center">НАИМЕНОВАНИЕ</th>
-            <th class="text-center" >ПУБЛИКАЦИЯ</th>
+            <th>НАИМЕНОВАНИЕ</th>
+            <th>ПУБЛИКАЦИЯ</th>
             </thead>
             <tbody>
             @forelse($categories as $category)
                 <tr>
                     <td>{{$category->title}}</td>
                     <td>{{$category->published}}</td>
-                    <td>
-                        <a href="{{route('admin.category.edit', ['id' => $category->id])}}"><i class="fas fa-edit"></i></a>
+                    <td class="text-right">
+                        <form onsubmit="if (confirm('Вы точно хотите удалть?')){return true}else{return false}" action="{{route('admin.category.destroy', $category)}}" method="post">
+                            {{csrf_field()}}
+                            <input type="hidden" value="DELETE" name="_method">
+
+                            <a class="btn btn-outline-dark " href="{{route('admin.category.edit', $category)}}"><i class="fas fa-edit"></i></a>
+                           <button type="submit" class="btn btn-outline-dark">
+                            Удалить
+                           </button>
+
+                        </form>
                     </td>
                 </tr>
             @empty

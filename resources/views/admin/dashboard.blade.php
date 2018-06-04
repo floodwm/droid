@@ -38,7 +38,7 @@
         </div>
         <div class="row">
             <div class="col-6 list-group">
-                <a href="#" class="btn btn-block btn btn-info">CREATE CATEGORY</a>
+                <a href="{{route('admin.category.create')}}" class="btn btn-block btn btn-info">CREATE CATEGORY</a>
                 <p></p>
                 <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
                     <div class="d-flex w-100 justify-content-between">
